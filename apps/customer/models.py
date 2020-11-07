@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Base(models.Model):
@@ -32,6 +33,9 @@ class Customer(Base):
 
     def get_full_city(self):
         return f'{self.city} - {self.state}'
+
+    def get_absolute_url(self):
+        return reverse('customer:customer-update', kwargs={'id': self.id})
 
     class Meta:
         db_table = 'customer'

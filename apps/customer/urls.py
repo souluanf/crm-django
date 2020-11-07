@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import CustomerListView, CustomerCreateView
+from .views import CustomerListView, CustomerCreateView,CustomerUpdateView
 
 app_name = 'customer'
 urlpatterns = [
     path('list/', CustomerListView.as_view(), name='customer-list'),
-    path('', CustomerCreateView.as_view(), name='customer-create')
+    path('', CustomerCreateView.as_view(), name='customer-create'),
+    path('<int:id>/', CustomerUpdateView.as_view(), name='customer-update')
 ]
