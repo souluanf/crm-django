@@ -1,0 +1,30 @@
+{% extends 'model-page.html' %}
+
+{% block content %}
+    <h2>Clientes</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cidade</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customer_list %}
+                <tr>
+                    <td>{{ customer.get_full_name }}</td>
+                    <td>{{ customer.get_full_city }}</td>
+                    <td>{{ customer.get_full_phone_number }}</td>
+                    <td>{{ customer.email }}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
