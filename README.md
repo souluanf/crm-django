@@ -31,7 +31,7 @@ O projeto trata-se da elaboração de um CRUD de Cliente utilizando Python, Djan
 ### Obtendo o código
 
 ```
-$ git clone https://github.com/souluanf/crm-django
+$ git clone https://github.com/souluanf/crm-django.git
 ```
 
 Crie um ambiente virtual com seu gerenciador favorito (conda, pyenv, virtualenv, etc);
