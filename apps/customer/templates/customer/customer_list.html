@@ -1,8 +1,11 @@
 {% extends 'model-page.html' %}
 
+
 {% block content %}
     <h2>Clientes</h2>
-
+    <a href="{% url 'customer:customer-create' %}">
+        <button type="button" class="btn btn-success" style="float: right; margin-bottom: 5px">Adicionar</button>
+    </a>
     <table class="table table-bordered">
         <thead>
             <tr>
