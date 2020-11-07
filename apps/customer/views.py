@@ -1,4 +1,5 @@
 from django.views.generic import ListView, CreateView
+from django.urls import reverse
 from .models import Customer
 from .forms import CustomerForm
 
@@ -17,3 +18,6 @@ class CustomerCreateView(CreateView):
 
     def form_valid(self, form):
         return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('customer:customer-list')
