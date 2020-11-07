@@ -1,6 +1,6 @@
 <div align="center">
-<a href="https://brazil.disys.com" target="_blank">
-    <img src="https://static.djangoproject.com/img/logo-django.42234b631760.svg" height="100px" alt="Disys"/>
+<a href="https://www.djangoproject.com" target="_blank">
+    <img src="https://static.djangoproject.com/img/logos/django-logo-positive.png" style="color: green" height="100px" alt="Disys"/>
 </a>
 
 <h3>CRM com Django</h3>
