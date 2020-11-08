@@ -29,9 +29,16 @@ O projeto trata-se da elaboração de um CRUD de Cliente utilizando Python, Djan
 
 A aplicação hospedada no Heroku tem um processo de deploy automatizado após algumas configurações e também é utilizado banco de dados PostgreSQL para persistências das informações em base de dados.
 
+## Heroku ->  https://crm-luan.herokuapp.com/
 
-## Execução local
-### Obtendo o código
+#### Credenciais
+```
+Login: usuario
+Senha: u5u4r1o123
+```
+
+#### Execução local
+Obtendo o código
 
 ```
 $ git clone https://github.com/souluanf/crm-django.git
@@ -47,3 +54,5 @@ Execute o servidor com o comando:
 <pre><code> $ python manager.py runserver </code></pre>
 
 Aponte o browser para http://localhost:8000
+
+
