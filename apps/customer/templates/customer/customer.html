@@ -1,13 +1,14 @@
 {% extends 'model-page.html' %}
+{% load crispy_forms_filters %}
 {% load crispy_forms_tags %}
 {% block content %}
 
     {% if form.errors %}
         {% for field in form %}
             {% for error in field.errors %}
-{#                <div class="alert alert-danger">#}
-{#                    <strong>{{ error|escape }}</strong>#}
-{#                </div>#}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
             {% endfor %}
         {% endfor %}
     {% endif %}
