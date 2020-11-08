@@ -1,4 +1,9 @@
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import (
+    ListView,
+    CreateView,
+    UpdateView,
+    DeleteView
+)
 from django.urls import reverse
 from django.shortcuts import get_object_or_404
 from .models import Customer
@@ -34,6 +39,16 @@ class CustomerUpdateView(UpdateView):
 
     def form_valid(self, form):
         return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('customer:customer-list')
+
+
+class CustomerDeleteView(DeleteView):
+
+    def get_object(self, queryset=None):
+        customer_id = self.kwargs.get('id')
+        return get_object_or_404(Customer, id=customer_id)
 
     def get_success_url(self):
         return reverse('customer:customer-list')

@@ -23,9 +23,9 @@
                     <td>{{ customer.get_full_city }}</td>
                     <td>{{ customer.get_full_phone_number }}</td>
                     <td>{{ customer.email }}</td>
-                    <td>
-                        <button type="button" class="btn btn-danger">Excluir</button>
-                    </td>
+                    <form method="post" action="{{ customer.get_delete_url }}">{% csrf_token %}
+                        <td><button type="submit" class="btn btn-danger">Excluir</button></td>
+                    </form>
                 </tr>
             {% endfor %}
         </tbody>
