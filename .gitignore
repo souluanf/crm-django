@@ -5,6 +5,8 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
+local_settings.py
+
 .idea/
 
 # Generated files
